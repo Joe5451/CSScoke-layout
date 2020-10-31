@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Lobster', cursive;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background: #006;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: center;
+            width: 1200px;
+            margin: auto;
+        }
+
+        .item {
+            width: 300px;
+            margin: 0 15px;
+            background: #fff;
+            text-align: center;
+            border: 1px solid #888;
+            transform: translateY(0);
+            transition: all 0.5s;
+        }
+
+        .item img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .item h2 {
+            border-bottom: 1px solid #888;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+            transition: .25s;
+        }
+
+        .item p {
+            line-height: 1.6;
+            transition: .25s;
+        }
+
+        .item .txt {
+            padding: 20px;
+            position: relative;
+        }
+
+        .item .txt:before {
+            content: '';
+            position:absolute;
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-right: 150px solid #fff;
+            border-left: 150px solid #fff;
+            bottom: 100%;
+            left: 0;
+        }
+
+        .item:hover {
+            transform: translateY(-50px);
+        }
+
+        .item:hover .txt {
+            background-image: linear-gradient(0deg, #fb8076, #feb85d);
+        }
+
+        .item:hover .txt:before {
+            border-right-color: #feb85d;
+            border-left-color: #feb85d;
+        }
+
+        .item:hover h2, .item:hover p {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/300/300?random=1" alt="picture">
+            <div class="txt">
+                <h2>Lorem, ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Temporibus voluptatem illum ad ducimusvero debitis
+                     tempore magni exercitationem? Eius, ea.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/300?random=2" alt="picture">
+            <div class="txt">
+                <h2>Lorem, ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Temporibus voluptatem illum ad ducimusvero debitis
+                     tempore magni exercitationem? Eius, ea.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/300/300?random=3" alt="picture">
+            <div class="txt">
+                <h2>Lorem, ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Temporibus voluptatem illum ad ducimusvero debitis
+                     tempore magni exercitationem? Eius, ea.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
