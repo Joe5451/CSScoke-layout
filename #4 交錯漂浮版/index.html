@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交錯漂浮版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@500;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            padding: 100px 0;
+            background: linear-gradient(20deg, #0D47A1, #2196F3) fixed center / 100% 100%;
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        .item .txt, .item .pic {
+            width: 55%;
+            flex-shrink: 0;
+        }
+
+        .item .txt {
+            padding: 50px 30px;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+
+        .item h2 {
+            margin-bottom: 1rem;
+            font-family: 'Big Shoulders Stencil Text', cursive;
+            font-weight: 900;
+        }
+
+        .item p {
+            line-height: 1.6;
+            font-family: 'Big Shoulders Stencil Text', cursive;
+            font-weight: 500;
+        }
+
+        .item .pic img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .item > :first-child {
+            margin-right: -10%;
+        }
+
+        .item:nth-child(1) .txt {
+            background: rgba(244,143,177 ,0.8);
+        }
+        .item:nth-child(2) .txt {
+            background: rgba(24,255,255 ,0.8);
+        }
+        .item:nth-child(3) .txt {
+            background: rgba(255,167,38 ,0.8);
+        }
+        .item:nth-child(4) .txt {
+            background: rgba(68,138,255 ,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- item 1 -->
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=1" alt="pic">
+            </div>
+            <div class="txt">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Officia blanditiis suscipit ab quas nemo aperiam qui necessitatibus 
+                    voluptates officiis neque. Assumenda numquam neque optio porro!</p>
+            </div>
+        </div>
+        <!-- item 2 -->
+        <div class="item">
+            <div class="txt">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Vitae debitis cum, excepturi perferendis suscipit commodi
+                      accusantium explicabo quas minus quam.</p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=2" alt="pic">
+            </div>
+        </div>
+        <!-- item 3 -->
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=3" alt="pic">
+            </div>
+            <div class="txt">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Vitae debitis cum, excepturi perferendis suscipit commodi
+                      accusantium explicabo quas minus quam.</p>
+            </div>
+        </div>
+        <!-- item 4 -->
+        <div class="item">
+            <div class="txt">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Vitae debitis cum, excepturi perferendis suscipit commodi
+                      accusantium explicabo quas minus quam.</p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=4" alt="pic">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
