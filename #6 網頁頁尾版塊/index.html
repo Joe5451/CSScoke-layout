@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁頁尾版塊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }    
+
+        body {
+            background: #000;
+        }
+
+        footer.main-footer {
+            padding: 150px 0 0 0;
+            background: linear-gradient(-20deg,#3f5494,#08c7a5); 
+        }
+
+        .main-footer .container {
+            display: flex;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .footer-item {
+            margin: 0 20px;
+            flex-grow: 1;
+            width: 0;
+        }
+
+        .footer-item h4 {
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px dotted #fff;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .footer-item nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-item nav a {
+            color: #fff;
+            line-height: 1.4;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .footer-item nav a:hover {
+            color: #fa0;
+        }
+
+        .footer-subs {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-subs form{
+            display: flex;
+            margin: auto 0;
+            width: 100%;
+        }
+
+        .footer-subs input[type="text"],
+        .footer-subs input[type="submit"] {
+            border: none;
+            padding: 5px 10px;
+            outline: none;
+        }
+
+        .footer-subs input[type="text"] {
+            width: 0;
+            flex-grow: 1;
+        }
+
+        .footer-subs input[type="submit"] {
+            color: #70f6d6;
+            background: #3e5293;
+        }
+
+        .copyright {
+            width: 100%;
+            background: #3e5293;
+            text-align: center;
+            margin: 150px 0 0;
+            padding: 10px 0;
+            color: #70f6df;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .main-footer .container {
+                flex-direction: column;
+            }
+
+            .footer-item {
+                width: inherit;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-item">
+                <h4>我是標題1</h4>
+                <nav>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>我是標題2</h4>
+                <nav>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>我是標題3</h4>
+                <nav>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                    <a href="#">我是項目</a>
+                </nav>
+            </div>
+            <div class="footer-item footer-subs">
+                <h4>訂閱電子報</h4>
+                <form>
+                    <input type="text">
+                    <input type="submit" value="訂閱">
+                </form>                    
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2021 practice project
+        </div>
+    </footer>
+</body>
+</html>
