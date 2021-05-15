@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方塊酥版面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background: #424242;
+        }
+
+        .wrap {
+            width: 100%;
+            margin: auto;
+            
+        }
+
+        .item {
+            float: left;
+            position: relative;
+        }
+
+        .item:first-child {
+            width: 50%;
+        }
+
+        .item:first-child ~ .item {
+            width: 25%;
+        }
+
+        .item img {
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .item .txt {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 15px;
+            background: rgba(0,0,0,.6);
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: scale(0);
+            transition: .5s;
+        }
+
+        .item:hover .txt {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .item h3 {
+            margin-bottom: 0.4em;
+        }
+
+        .item p {
+            line-height: 1.7;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .item:first-child {
+                width: 100%;
+            }
+
+            .item:first-child ~ .item {
+                width: 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/500?random=1">
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dolorem ullam ut magnam est perferendis doloribus accusantium minima incidunt veritatis!</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500?random=2">
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ad.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500?random=3">
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500?random=4">
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores dignissimos quis eligendi dolorum? Alias, maiores.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500?random=5">
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
