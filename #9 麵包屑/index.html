@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麵包屑</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background: #5C6BC0;
+        }
+
+        .wrap {
+            padding: 10px 0;
+            background: #3F51B5;
+            box-shadow: 0 5px 5px rgba(63,81,181 ,.7);
+        }
+
+        .breadcrumb {
+            width: 90%;
+            margin: auto;
+            display: flex;
+        }
+
+        .breadcrumb li {
+            padding: 0 20px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .breadcrumb a:hover,
+        .breadcrumb li:last-child a {
+            color: #FFEB3B;
+        }
+
+        .breadcrumb li + li {
+            padding-left: 0;
+        }
+
+        .breadcrumb li + li:before {
+            content: '/';
+            color: #fff;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ol class="breadcrumb">
+            <li><a href="#">路徑一</a></li>
+            <li><a href="#">路徑二</a></li>
+            <li><a href="#">路徑三</a></li>
+            <li><a href="#">路徑四</a></li>
+            <li><a href="#">路徑五</a></li>
+            <li><a href="#">路徑六</a></li>
+        </ol>
+    </div>
+</body>
+</html>
