@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>導覽列</title>
+    <title>導覽列變化2</title>
     <style>
         * {
             margin: 0;
@@ -18,10 +18,12 @@
 
         .main-header .container {
             display: flex;
+            flex-direction: column; /* 加了這行 */
             max-width: 1200px;
             margin: auto;
             align-items: center;
             padding: 20px;
+            height: 100px;
         }
 
         .main-header .logo {
@@ -66,26 +68,6 @@
             left: 0%;
             right: 0%;
         }
-
-        .main-header .header-search {
-            display: flex;
-        }
-
-        .main-header .header-search input,
-        .main-header .header-search button {
-            border: 0;
-            outline: 0;
-            background: #fff;
-            padding: 5px 10px;
-        }
-
-        .main-header .header-search input {
-            border-radius: 200px 0 0 200px;
-        }
-
-        .main-header .header-search button {
-            border-radius: 0 200px 200px 0;
-        }
     </style>
     <script src="https://kit.fontawesome.com/b22ce6914a.js" crossorigin="anonymous"></script>
 </head>
@@ -99,10 +81,6 @@
                 <a href="#">項目三</a>
                 <a href="#">項目四</a>
             </nav>
-            <form class="header-search">
-                <input type="search">
-                <button><i class="fas fa-search"></i></button>
-            </form>
         </div>
     </header>
 </body>
