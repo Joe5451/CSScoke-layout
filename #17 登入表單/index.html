@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入表單</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background: url('https://picsum.photos/800/600') no-repeat center / cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login {
+            width: 600px;
+            height: 500px;
+            background: rgba(0,0,0,.5);
+            border: 10px solid #fff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 60px #000;
+            backdrop-filter: blur(5px);
+        }
+
+        .form {
+            width: 400px;
+            color: #fff;
+        }
+
+        .form h2 {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #fff;
+        }
+
+        .form .group {
+            margin-bottom: 20px;
+        }
+
+        .form label {
+            line-height: 2;
+        }
+
+        .form input {
+            width: 100%;
+            border: 1px solid #aaa;
+            line-height: 3;
+            border-radius: 5px;
+        }
+
+        .form .btn-group {
+            margin-top: 50px;
+            font-size: 0;
+        }
+
+        .form .btn {
+            font-size: 20px;
+            border-radius: 5px;
+            border: 0;
+            background: #90CAF9;
+            padding: 10px 0;
+            width: 190px;
+            color: #fff;
+        }
+
+        .form .btn + .btn {
+            margin-left: 20px;
+        }
+        
+    </style>
+    <script src="https://kit.fontawesome.com/b22ce6914a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="login">
+        <form class="form">
+            <h2>會員登入</h2>
+            <div class="group">
+                <label for="user_id">帳號</label>
+                <input type="text" id="user_id">
+            </div>
+            <div class="group">
+                <label for="user_password">密碼</label>
+                <input type="password" id="user_password">
+            </div>
+            <div class="btn-group">
+                <button class="btn">登入</button>
+                <button class="btn">取消</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
