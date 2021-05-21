@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>破格式設計</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background: #B2EBF2;
+            display: flex;
+            align-items: center;
+        }
+
+        .wrap {
+            display: flex;
+            max-width: 1200px;
+            margin: 100px auto;
+            padding-top: 75px;
+        }
+
+        .item {
+            width: 370px;
+            margin: 0 15px;
+            text-align: center;
+            border: 10px solid #80DEEA;
+            border-radius: 20px;
+            box-shadow: 10px 20px 50px #81D4FA;
+            background: #fff;
+        }
+
+        .item h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #4FC3F7;
+        }
+
+        .item p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .item .icon {
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            margin: -75px auto 0;
+            font-size: 70px;
+            line-height: 150px;
+            color: #80DEEA;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .item .icon:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            border-top: 10px solid #80DEEA;
+            border-right: 10px solid #80DEEA;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-radius: 50%;
+            transform: rotate(-45deg);
+        }
+
+        .item .txt {
+            padding: 20px 20px 32px;
+        }
+
+        .item:hover .fas {
+            animation: ss .3s linear infinite alternate;
+        }
+
+        @keyframes ss {
+            0% { transform: rotate(-10deg); }
+            100% { transform: rotate(10deg); }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/b22ce6914a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <div class="icon">
+                <i class="fas fa-smile-wink"></i>
+            </div>
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, sit animi nisi dolorem aliquid earum reprehenderit dolor architecto esse ipsam.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fas fa-mug-hot"></i>
+            </div>
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, sit animi nisi dolorem aliquid earum reprehenderit dolor architecto esse ipsam.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div class="txt">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, sit animi nisi dolorem aliquid earum reprehenderit dolor architecto esse ipsam.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
