@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多層次收合選單</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #546377;
+        }
+
+        .side-menu {
+            width: 300px;
+            height: 100%;
+            background-image: linear-gradient(0deg, #CE93D8, #9C27B0);
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0;
+            box-sizing: border-box;
+            position: relative; 
+            /* transform: translateX(-100%); */
+            transition: .3s;
+        }
+
+        .side-menu form {
+            display: flex;
+            margin: 0 10px 50px;
+	        border-radius: 100px;
+	        border:1px solid rgb(255,255,255,.4);
+        }
+
+        .side-menu form input,
+        .side-menu form button {
+            background: transparent;
+            outline: none;
+            color: #fff;
+            padding: 5px 10px;
+            border: 0;
+        }
+
+        .side-menu form input {
+            width: 0;
+            flex-grow: 1;
+        }
+        
+        .side-menu form button {
+            width: 50px;
+        }
+
+        ::placeholder {
+            color: rgba(255,255,255,.4);
+        }
+
+        .side-menu label {
+            background: #000;
+            width: 30px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+            position: absolute;
+            right: -30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: -1; /* 新增，讓 label 在子選單下面 */
+        }
+
+        #side-menu-switch {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        #side-menu-switch:checked + .side-menu {
+            transform: translateX(0);
+        }
+
+        #side-menu-switch:checked + .side-menu label .fas {
+            transform: scaleX(-1);
+        }
+
+        /* nav 改 .nav */
+        /* 捨棄 overflow 否則子選單會用 scroll 顯示 */
+        /* .nav {
+            overflow: auto;
+        } */
+
+        .nav a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        /* a + a:before 改成 li + li > a:before */
+        .nav li + li > a:before {
+            content: '';
+            border-top: 1px solid rgba(255,255,255,.4);
+            left: 10px;
+            right: 10px;
+            top: 0;
+            position: absolute;
+        }
+
+        .nav a .fas {
+            width: 20px;
+            margin-right: -16px;
+            transform: scale(0);
+            transition: .3s;
+        }
+
+        .nav li:hover .fas {
+            margin-right: 0;
+            transform: scale(1);
+        }
+
+        /* 新增 */
+        .nav li {
+            position: relative;
+        }
+
+        .nav ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 300px;
+            background: rgba(255,255,255,.4);
+            box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+        }
+
+        .nav li:hover > a {
+            background: rgba(0,0,0,.4);
+        }
+
+        .nav li:hover > ul {
+            display: block;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/b22ce6914a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="checkbox" id="side-menu-switch">
+
+    <div class="side-menu">
+        <form>
+            <input type="search" placeholder="請輸入關鍵字">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+
+        <!-- nav 改成 ul.nav，a 用 li 包住 -->
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <i class="fas fa-power-off"></i>
+                    item 1
+                </a>
+                <!-- 子選單一層 -->
+                <ul>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit1</a>
+                        <!-- 子選單二層 -->
+                        <ul>
+                            <li><a href="#">lorem1</a></li>
+                            <li><a href="#">lorem2</a></li>
+                            <li><a href="#">lorem3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit2</a>
+                        <!-- 子選單二層 -->
+                        <ul>
+                            <li><a href="#">lorem1</a></li>
+                            <li><a href="#">lorem2</a></li>
+                            <li><a href="#">lorem3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit3</a>
+                        <!-- 子選單二層 -->
+                        <ul>
+                            <li><a href="#">lorem1</a></li>
+                            <li><a href="#">lorem2</a></li>
+                            <li><a href="#">lorem3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor sit4</a>
+                        <!-- 子選單二層 -->
+                        <ul>
+                            <li><a href="#">lorem1</a></li>
+                            <li><a href="#">lorem2</a></li>
+                            <li><a href="#">lorem3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                    item 2
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-laptop"></i>
+                    item 3
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cubes"></i>
+                    item 4
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-angle-double-right"></i>
+                    item 5
+                </a>
+            </li>
+        </ul>
+
+        <label for="side-menu-switch"><i class="fas fa-angle-right"></i></label>
+    </div>
+</body>
+</html>
