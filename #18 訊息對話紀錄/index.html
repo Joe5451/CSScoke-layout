@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訊息對話紀錄</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #d3effb;
+            padding: 50px 0;
+        }
+
+        .dialogue {
+            background: #EEEEEE;
+            box-shadow: 0 0 10px #B2EBF2;
+            width: 500px;
+            padding: 20px;
+        }
+
+        .user {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .local {
+            justify-content: flex-end;
+        }
+
+        .user .avatar {
+            width: 60px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .user .pic {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .user .pic img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .user .txt {
+            background: #aaa;
+            padding: 16px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .remote .txt {
+            margin-left: 20px;
+            margin-right: 80px;
+            color: #a1b4c5;
+            background: #fff;
+        }
+
+        .local .txt {
+            margin-left: 80px;
+            margin-right: 20px;
+            color: #fff;
+            background: #3e92cc;
+            order: -1;
+        }
+
+        .remote .txt::before,
+        .local .txt::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .remote .txt::before {
+            border-right: 10px solid #fff;
+            left: -10px;
+        }
+
+        .local .txt::before {
+            border-left: 10px solid #3e92cc;
+            right: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dialogue">
+        <div class="user remote">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://picsum.photos/100/100?random=10" alt="avatar">
+                </div>
+                <div class="name">Peter</div>
+            </div>
+            <div class="txt">
+                Hi! 好久不見
+            </div>
+        </div>
+        <div class="user local">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://picsum.photos/100/100?random=20" alt="avatar">
+                </div>
+                <div class="name">Ben</div>
+            </div>
+            <div class="txt">
+                是阿!好久不見
+            </div>
+        </div>
+        <div class="user remote">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://picsum.photos/100/100?random=10" alt="avatar">
+                </div>
+                <div class="name">Peter</div>
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates distinctio blanditiis consequatur dolores soluta totam expedita architecto nisi nihil placeat, ipsa enim. Asperiores saepe in sit fugit placeat aliquid incidunt?
+            </div>
+        </div>
+        <div class="user local">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://picsum.photos/100/100?random=20" alt="avatar">
+                </div>
+                <div class="name">Ben</div>
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatum harum aspernatur doloribus eligendi cum.
+            </div>
+        </div><div class="user remote">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://picsum.photos/100/100?random=10" alt="avatar">
+                </div>
+                <div class="name">Peter</div>
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+        <div class="user local">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://picsum.photos/100/100?random=20" alt="avatar">
+                </div>
+                <div class="name">Ben</div>
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi placeat fuga! Doloribus vel velit iure quas, similique rem omnis cumque necessitatibus, dolorum quo ut animi aspernatur iusto pariatur eius nemo quae consectetur temporibus quis atque unde commodi veniam explicabo!
+            </div>
+        </div>
+    </div>
+</body>
+</html>
