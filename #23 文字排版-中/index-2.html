@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字排版-中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            margin: 100px 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+
+        .container h1 {
+            width: 400px;
+            padding: 15px;
+            box-sizing: border-box;
+            /* position: absolute; */
+            /* top: 0; */
+            /* right: 0; */
+            /* left: 0; */
+            /* bottom: 0; */
+            /* margin: auto; */
+            /* background: cadetblue; */
+            font-size: 90px; /* 50px */
+            /* text-align: center; */
+            /* display: flex; */
+            /* align-items: center; */
+
+            /* add */
+            float: right;
+            position: relative;
+            color: #aaa;
+        }
+
+        /* add */
+        .container h1::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            border: 30px solid #eee;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .container .txt {
+            column-count: 2;
+            column-gap: 30px; /* 460px; */
+        }
+
+        .container p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        .container p:first-child:first-letter {
+            font-size: 40px;
+            float: left;
+            padding-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <h1>Lorem ipsum dolor sit</h1>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
