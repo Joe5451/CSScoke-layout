@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不規則邊緣</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .banner {
+            height: 700px;
+            background: url('https://picsum.photos/id/1018/900/800') center top /cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 100px 0;
+            display: flex;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section {
+            position: relative;
+        }
+
+        .section .item {
+            width: 570px;
+            margin: 0 15px;
+        }
+
+        .section .item h2 {
+            margin-bottom: 1.3em;
+        }
+
+        .section .item p {
+            line-height: 1.7;
+            margin-bottom: 1.6em;
+        }
+
+        .section::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateY(-50%) translateX(-30%);
+            box-shadow: 178px 0 0 30px #fff,
+                        327px 34px 0 20px #fff,
+                        480px 9px 0 60px #fff,
+                        690px 71px 0 60px #fff,
+                        880px 0 0 89px #fff,
+
+                        -178px 0 0 30px #fff,
+                        -327px 34px 0 20px #fff,
+                        -480px 9px 0 60px #fff,
+                        -690px 71px 0 60px #fff,
+                        -880px 0 0 89px #fff,
+                        -1100px 50px 0 89px #fff,
+                        
+                        100px 0px 0 56px rgba(0,0,10,.5),
+                        298px 10px 0 56px rgba(0,0,10,.5),
+                        540px -40px 0 50px rgba(0,0,10,.5),
+                        740px -30px 0 30px rgba(0,0,10,.5),
+                        880px -100px 0 80px rgba(0,0,10,.5),
+                        1000px 0px 0 80px rgba(0,0,10,.5),
+
+                        -60px 0px 0 56px rgba(0,0,10,.5),
+                        -298px 10px 0 56px rgba(0,0,10,.5),
+                        -540px -40px 0 50px rgba(0,0,10,.5),
+                        -740px -30px 0 30px rgba(0,0,10,.5),
+                        -780px -70px 0 80px rgba(0,0,10,.5),
+                        -1200px 0px 0 80px rgba(0,0,10,.5);
+        }
+
+        .section::before {
+            content: '';
+            background: #fff;
+            display: block;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="section">
+        <div class="container">
+            <div class="item">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam sit soluta voluptatibus dolor vitae deserunt mollitia error eos sint, ad voluptates maxime magni omnis excepturi eligendi quibusdam impedit tempore. Fuga sed accusamus et eaque officia explicabo maiores tempore iste, autem quaerat dicta nisi facilis corrupti excepturi placeat quidem ducimus!</p>
+            </div>
+            <div class="item">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam sit soluta voluptatibus dolor vitae deserunt mollitia error eos sint, ad voluptates maxime magni omnis excepturi eligendi quibusdam impedit tempore. Fuga sed accusamus et eaque officia explicabo maiores tempore iste, autem quaerat dicta nisi facilis corrupti excepturi placeat quidem ducimus!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
